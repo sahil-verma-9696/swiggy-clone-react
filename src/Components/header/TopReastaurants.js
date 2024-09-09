@@ -1,8 +1,12 @@
-import ShimerBanner from '../utils/ShimerBanner'
-import { BANNER_IMG_URL } from './../../enviroment'
-function Banner({ card }) {
-   
-    return (card === undefined) ? <ShimerBanner /> : (
+import Card from '../utils/Card'
+import ShimerTopRes from '../utils/ShimerTopRes'
+
+
+function TopReastaurants({ card }) {
+
+    console.log(card?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+
+    return (card === undefined) ? <ShimerTopRes /> : (
         <div className=' w-3/4 m-auto mt-4'>
             <div className='flex justify-between'>
                 <h1 className={`font-extrabold text-2xl pl-[${card?.card?.card?.header?.headerStyling?.padding?.left}px] pt-[${card?.card?.card?.header?.headerStyling?.padding?.top}px] pb-[${card?.card?.card?.header?.headerStyling?.padding?.bottom}px]`} >
@@ -19,18 +23,15 @@ function Banner({ card }) {
                 </div>
             </div>
 
-            <ul className='flex flex-nowrap w-full overflow-x-hidden'>
-
+            <ul className='flex flex-nowrap w-full overflow-x-hidden mt-5'>
                 {
-                    card?.card?.card?.imageGridCards?.info?.map((e) => <li className="img-wrapper min-w-40 mr-1">
-                        <img src={BANNER_IMG_URL + e?.imageId} alt="" />
-                    </li>)
+                    card?.card?.card?.gridElements?.infoWithStyle?.restaurants?.map((info)=><Card card={info}/>)
                 }
             </ul>
 
-            <hr className='mt-12'/>
+            <hr className='mt-12' />
         </div>
     )
 }
 
-export default Banner
+export default TopReastaurants
