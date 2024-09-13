@@ -22,7 +22,7 @@ function Banner({ card }) {
             <ul className='flex flex-nowrap w-full overflow-x-hidden'>
 
                 {
-                    card?.card?.card?.imageGridCards?.info?.map((e) => <li className="img-wrapper min-w-40 mr-1">
+                    card?.card?.card?.imageGridCards?.info?.map((e) => <li key={e?.imageId} className="img-wrapper min-w-40 mr-1">
                         <img src={BANNER_IMG_URL + e?.imageId} alt="" />
                     </li>)
                 }

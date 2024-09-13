@@ -6,6 +6,10 @@
     .nav-right-item {
         @apply font-semibold hover:text-[#FF6820] flex justify-center items-center gap-3;
     }
+
+    .filter-btn{
+        @apply mt-8 mb-4 px-3 py-1 flex gap-2 justify-center items-center rounded-md shadow-md;
+    }
 }
 
 

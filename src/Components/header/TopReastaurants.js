@@ -4,7 +4,7 @@ import ShimerTopRes from '../utils/ShimerTopRes'
 
 function TopReastaurants({ card }) {
 
-    console.log(card?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    
 
     return (card === undefined) ? <ShimerTopRes /> : (
         <div className=' w-3/4 m-auto mt-4'>
@@ -25,7 +25,7 @@ function TopReastaurants({ card }) {
 
             <ul className='flex flex-nowrap w-full overflow-x-hidden mt-5'>
                 {
-                    card?.card?.card?.gridElements?.infoWithStyle?.restaurants?.map((info)=><Card card={info}/>)
+                    card?.card?.card?.gridElements?.infoWithStyle?.restaurants?.map((info)=><Card key={info?.info?.id} card={info}/>)
                 }
             </ul>
 

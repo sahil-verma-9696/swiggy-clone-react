@@ -4,9 +4,9 @@ function Card({ card }) {
 
 
     return (
-        <div className='card-wrapper min-w-[273px] h-fit ml-[16px] mr-[16px]'>
+        <div className='card-wrapper min-w-[263px] max-w-[263px] h-fit ml-[16px] mb-6'>
 
-            <div className="card-img-wrapper w-full h-[182px] rounded-2xl bg-red-300 relative">
+            <div className="card-img-wrapper w-full h-[182px] rounded-2xl bg-gray-300 relative">
                 <img className='size-full object-cover rounded-2xl' src={RESTAURANT_IMG_URL + card?.info?.cloudinaryImageId} alt="" />
                 <div className='absolute size-full bg-gradient-to-b from-transparent from-50% to-black top-0 rounded-2xl'>
                     <p className='text-white absolute bottom-2 text-2xl font-extrabold ml-4'>
@@ -19,7 +19,7 @@ function Card({ card }) {
 
 
             <div className='mt-3 ml-5'>
-                <h className="font-extrabold text-lg">{card?.info?.name}</h>
+                <h1 className="font-extrabold text-lg">{card?.info?.name}</h1>
                 <div className='flex font-semibold justify-center items-center w-fit gap-1'>
                     <div className='bg-green-500 size-5 flex justify-center items-center rounded-full'><i className="fa-solid fa-star text-white fa-xs"></i></div>
                     <span >{card?.info?.avgRatingString}</span>

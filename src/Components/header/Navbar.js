@@ -1,6 +1,6 @@
 function Navbar() {
   return (
-    <nav className="w-full h-[80px] bg-white shadow-md sticky top-0">
+    <nav className="w-full h-[80px] bg-white shadow-md sticky top-0 z-20">
       <div className="nav-inner h-full w-4/5 m-auto flex justify-between">
 
         {/* nav-inner-left  */}
