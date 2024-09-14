@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/swiggy-clone-react/static/css/main.10fb9e9b.css",
+    "main.js": "/swiggy-clone-react/static/js/main.fa660c33.js",
+    "index.html": "/swiggy-clone-react/index.html",
+    "main.10fb9e9b.css.map": "/swiggy-clone-react/static/css/main.10fb9e9b.css.map",
+    "main.fa660c33.js.map": "/swiggy-clone-react/static/js/main.fa660c33.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.10fb9e9b.css",
+    "static/js/main.fa660c33.js"
+  ]
+}
