@@ -16,7 +16,7 @@ import Menu from './Components/restaurants-menu/Menu';
 
 const myRouter = createBrowserRouter([
   {
-    path: "/",
+    path: "/swiggy-clone-react",
     element: <App />,
     children: [
       {

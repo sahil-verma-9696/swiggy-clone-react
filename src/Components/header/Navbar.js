@@ -27,7 +27,7 @@ function Navbar() {
               <i className="fa-solid fa-briefcase"></i>
               <p>Swiggy Corporate</p>
             </Link>
-            <Link className="nav-right-item" to={"/search"}>
+            <Link className="nav-right-item" to={"/swiggy-clone-react/search"}>
               <i className="fa-solid fa-magnifying-glass"></i>
               <p>Search</p>
             </Link>
