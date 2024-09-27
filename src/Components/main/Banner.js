@@ -5,7 +5,11 @@ function Banner({ card }) {
     return (card === undefined) ? <ShimerBanner /> : (
         <div className=' w-3/4 m-auto mt-4'>
             <div className='flex justify-between'>
-                <h1 className={`font-extrabold text-2xl pl-[${card?.card?.card?.header?.headerStyling?.padding?.left}px] pt-[${card?.card?.card?.header?.headerStyling?.padding?.top}px] pb-[${card?.card?.card?.header?.headerStyling?.padding?.bottom}px]`} >
+                <h1 
+                
+                className={`font-extrabold text-2xl pl-[${card?.card?.card?.header?.headerStyling?.padding?.left}px] pt-[${card?.card?.card?.header?.headerStyling?.padding?.top}px] pb-[${card?.card?.card?.header?.headerStyling?.padding?.bottom}px]`
+                
+                } >
                     {card?.card?.card?.header?.title}
                 </h1>
 

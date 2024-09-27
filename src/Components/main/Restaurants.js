@@ -3,7 +3,7 @@ import Card from "../utils/Card";
 import { useEffect, useState } from "react";
 
 function Restaurants({ head, filterCard, restaurantsCard }) {
-
+    console.log(restaurantsCard)
     const [restaurants, setRestaurants] = useState([]);
 
     useEffect(() => {

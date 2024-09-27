@@ -41,7 +41,7 @@ function Navbar() {
             </li>
             <li className="nav-right-item">
               <i className="fa-regular fa-user"></i>
-              <p>Sign</p>
+              <p>Sign in</p>
             </li>
             <li className="nav-right-item">
               <i className="fa-solid fa-cart-shopping"></i>

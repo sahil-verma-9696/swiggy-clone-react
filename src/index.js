@@ -10,6 +10,7 @@ import {
 import Error from './util/Error';
 import Search from './Components/search/Search';
 import App from './App';
+import Menu from './Components/restaurants-menu/Menu';
 
 
 
@@ -25,6 +26,10 @@ const myRouter = createBrowserRouter([
       {
         path: "/search",
         element: <Search />
+      },
+      {
+        path: "/restaurant/:resid",
+        element: <Menu />
       }
     ],
     errorElement: <Error />

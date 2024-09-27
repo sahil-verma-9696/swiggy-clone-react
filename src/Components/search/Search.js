@@ -1,6 +1,6 @@
 import useCuisines from "../../util/useCuisines";
-
 function Search() {
+
 
     const [cards] = useCuisines();
 
