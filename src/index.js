@@ -1,24 +1,41 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { createBrowserRouter } from 'react-router-dom';
+import Navbar from './Components/header/Navbar';
 import Main from './Components/main/Main';
-import { App } from './App';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Error from './util/Error';
+import Search from './Components/search/Search';
+import App from './App';
 
 
 
-const router = createBrowserRouter([
+const myRouter = createBrowserRouter([
   {
-    path : "/",
-    element : <Main/>
-  }
-])
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Main />
+      },
+      {
+        path: "/search",
+        element: <Search />
+      }
+    ],
+    errorElement: <Error />
+  },
+
+]);
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App/>
-  </React.StrictMode>
+  <RouterProvider router={myRouter} />
 );
 
 

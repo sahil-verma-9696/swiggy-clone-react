@@ -1,7 +1,7 @@
 import ShimerBanner from '../utils/ShimerBanner'
-import { BANNER_IMG_URL } from './../../enviroment'
+import { BANNER_IMG_URL } from '../../enviroment'
 function Banner({ card }) {
-   
+
     return (card === undefined) ? <ShimerBanner /> : (
         <div className=' w-3/4 m-auto mt-4'>
             <div className='flex justify-between'>
@@ -28,7 +28,7 @@ function Banner({ card }) {
                 }
             </ul>
 
-            <hr className='mt-12'/>
+            <hr className='mt-12' />
         </div>
     )
 }

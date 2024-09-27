@@ -1,3 +1,6 @@
+import logoImg from './swiggy-logo.png'
+import { Link } from 'react-router-dom'
+
 function Navbar() {
   return (
     <nav className="w-full h-[80px] bg-white shadow-md sticky top-0 z-20">
@@ -7,7 +10,7 @@ function Navbar() {
         <div className="nav-inner-left h-full flex justify-center items-center gap-8">
 
           <div className="log-wrapper w-10">
-            <img className="w-full" src="./swiggy-logo.png" alt="" />
+            <img className="w-full" src={logoImg} alt="no img found" />
           </div>
 
           <section className="flex gap-4 items-center justify-center cursor-pointer">
@@ -20,14 +23,14 @@ function Navbar() {
 
         <div className="nav-inner-right flex justify-center items-center">
           <ul className="flex justify-center items-center gap-12">
-            <li className="nav-right-item">
+            <Link className="nav-right-item">
               <i className="fa-solid fa-briefcase"></i>
               <p>Swiggy Corporate</p>
-            </li>
-            <li className="nav-right-item">
+            </Link>
+            <Link className="nav-right-item" to={"/search"}>
               <i className="fa-solid fa-magnifying-glass"></i>
               <p>Search</p>
-            </li>
+            </Link>
             <li className="nav-right-item">
               <i className="fa-solid fa-percent"></i>
               <p>Offers<sup className="text-[#FFBB3B]">NEW</sup></p>
