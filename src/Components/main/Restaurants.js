@@ -4,7 +4,6 @@ import Card from "../utils/Card";
 import { useEffect, useState } from "react";
 
 function Restaurants({ head, filterCard, restaurantsCard }) {
-    console.log(restaurantsCard)
     const [restaurants, setRestaurants] = useState([]);
 
     useEffect(() => {
@@ -101,7 +100,7 @@ function Restaurants({ head, filterCard, restaurantsCard }) {
                     {
 
                         restaurants?.map((e) =>
-                            <Link key={e?.info?.id} to={"/swiggy-clone-react/restaurant/"+e.info.id}>
+                            <Link key={e?.info?.id} to={"/swiggy-clone-react/restaurant/" + e.info.id}>
                                 <Card card={e} />
                             </Link>)
                     }
