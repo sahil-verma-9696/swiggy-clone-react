@@ -16,19 +16,19 @@ import Menu from './Components/restaurants-menu/Menu';
 
 const myRouter = createBrowserRouter([
   {
-    path: "/swiggy-clone-react",
+    path: "/",
     element: <App />,
     children: [
       {
-        path: "/",
+        path: "/swiggy-clone-react",
         element: <Main />
       },
       {
-        path: "/search",
+        path: "/swiggy-clone-react/search",
         element: <Search />
       },
       {
-        path: "/restaurant/:resid",
+        path: "/swiggy-clone-react/restaurant/:resid",
         element: <Menu />
       }
     ],

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Card from "../utils/Card";
 // import useRestaurants from "../../util/useRestaurants";
 import { useEffect, useState } from "react";
@@ -94,12 +95,15 @@ function Restaurants({ head, filterCard, restaurantsCard }) {
 
 
 
-
+                {/* All restuarants */}
                 <div className="flex flex-wrap w-full mt-5">
 
                     {
 
-                        restaurants?.map((e) => <Card key={e?.info?.id} card={e} />)
+                        restaurants?.map((e) =>
+                            <Link key={e?.info?.id} to={"/swiggy-clone-react/restaurant/"+e.info.id}>
+                                <Card card={e} />
+                            </Link>)
                     }
                 </div>
 

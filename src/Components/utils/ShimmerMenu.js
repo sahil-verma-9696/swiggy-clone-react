@@ -1,51 +1,6 @@
-import { useParams } from "react-router-dom";
-import useMenuCards from "../../util/useMenuCards"
-import ShimmerMenu from "../utils/ShimmerMenu";
+import React from 'react'
 
-function Menu() {
-
-    const {resid} = useParams()
-
-    let rootCards = useMenuCards(resid);
-
-    if (rootCards.length === 0) return <ShimmerMenu />
-
-
-    const [
-        ,  // Skip card0
-        ,  // Skip card1
-        {
-            card: {
-                card: {
-                    info: {
-                        name,
-                        locality,
-                        avgRatingString,
-                        totalRatingsString,
-                        costForTwoMessage,
-                        cuisines,
-                        sla,
-                        feeDetails: { message }
-                    }
-                }
-            }
-        }
-        ,
-        ,
-        {
-            groupedCard:{
-                cardGroupMap:{
-                    REGULAR:{
-                        cards
-                    }
-                }
-            }
-        }
-
-    ] = rootCards;
-
-    console.log(cards)
-
+function ShimmerMenu() {
     return (
         <div className=" w-[55%] pt-12 m-auto">
 
@@ -53,8 +8,8 @@ function Menu() {
 
                 {/* Heading */}
                 <h1
-                    className="font-bold text-2xl mb-8"
-                >{name}</h1>
+                    className="font-bold text-2xl mb-8 w-48 h-4 bg-gray-200 rounded-lg"
+                ></h1>
 
                 {/* Sub card */}
 
@@ -68,16 +23,15 @@ function Menu() {
                         >
                             <i className="fa-solid fa-star text-white fa-xs"></i>
                         </div>
-                        <span >{`${avgRatingString} (${totalRatingsString})`}</span>
+                        <span className='w-12 h-4 bg-gray-200 rounded-lg'></span>
                         <div className='size-1 rounded-full bg-black'></div>
-                        <span>{costForTwoMessage}</span>
+                        <span className='w-12 h-4 bg-gray-200 rounded-lg'></span>
                     </div>
 
                     <div
-                        className="underline text-[#FF6820] font-bold"
-                    >
-                        <span>{cuisines?.join(", ")}</span>
-                    </div>
+                        className="w-16 h-4 mt-2 bg-gray-200 rounded-lg"
+                    ></div>
+
 
                     <div
                         className="mt-4 mb-4 flex"
@@ -88,8 +42,10 @@ function Menu() {
                                 <div
                                     className="inline-block rounded-full size-2 bg-gray-400"
                                 ></div>
-                                <span className="font-bold">Outlet</span>
-                                <span>{locality}</span>
+                                <span className="font-bold">
+                                    <div className='w-12 h-4 bg-gray-200 rounded-lg'></div>
+                                </span>
+                                <span><div className='w-12 h-4 bg-gray-200 rounded-lg'></div></span>
                                 <span className="cursor-pointer"><i className="fa-solid fa-sort-down text-[#FF6820]"></i></span>
                             </div>
 
@@ -101,14 +57,16 @@ function Menu() {
                                 <div
                                     className="inline-block rounded-full size-2 bg-gray-400"
                                 ></div>
-                                <span className="font-semibold">{sla.slaString}</span>
+                                <span className="font-semibold">
+                                    <div className='w-20 h-4 mt-2 bg-gray-200 rounded-lg'></div>
+                                </span>
                             </div>
                         </div>
                     </div>
 
                     <div className="flex gap-2">
                         <span><i className="fa-solid fa-person-biking"></i></span>
-                        {message}
+                        <div className='w-40 h-4 bg-gray-200 rounded-lg'></div>
                     </div>
                 </div>
             </div>
@@ -117,4 +75,4 @@ function Menu() {
     )
 }
 
-export default Menu
+export default ShimmerMenu
