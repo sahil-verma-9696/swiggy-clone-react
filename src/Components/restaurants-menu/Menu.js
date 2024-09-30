@@ -2,8 +2,11 @@ import { useParams } from "react-router-dom";
 import useMenuCards from "../../util/useMenuCards";
 import ShimmerMenu from "../utils/ShimmerMenu";
 import ItemCategory from "./ItemCategory";
+import { useState } from "react";
 
 function Menu() {
+    const [showItems, setShowItems] = useState(false);
+    const [showIndex, setShowIndex] = useState(0)
     const { resid } = useParams();
 
     let rootCards = useMenuCards(resid);
@@ -43,7 +46,7 @@ function Menu() {
 
     const itemCategory = cards.filter(
         (e) =>
-            e.card.card["@type"] ==
+            e.card.card["@type"] ===
             "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
 
@@ -101,9 +104,16 @@ function Menu() {
             </div>
 
             <div className="itemCategories bg-gray-200">
-                {
-                    itemCategory.map(e=><ItemCategory key={e.card.card.title} card={e.card.card}/>)
-                }
+                {itemCategory.map((e, index) => (
+                    <ItemCategory
+                        index={index}
+                        key={e.card.card.title}
+                        card={e.card.card}
+                        showItems={index === showIndex && showItems}
+                        setShowItems={setShowItems}
+                        setShowIndex={setShowIndex}
+                    />
+                ))}
             </div>
         </div>
     );

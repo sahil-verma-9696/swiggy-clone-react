@@ -2,7 +2,7 @@ import React from "react";
 import { MENU_IMG_URL } from "../../enviroment";
 
 function ItemCardDetails({ info }) {
-  console.log(info);
+
   const {
     name,
     defaultPrice,
